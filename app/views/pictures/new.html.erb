@@ -1,11 +1,5 @@
 <h1>Pictures#new</h1>
 <%= form_with model: @picture, local: true do |f| %>
-  <%= f.label 'セリフ' %>
-  <%= f.text_field :serif %>
-  <br />
-  <%= f.label '話数' %>
-  <%= f.text_field :episode %>
-  <br />
   <%= f.file_field :picture %>
   <%= f.submit '画像をアップロードする' %>
 <% end %>
