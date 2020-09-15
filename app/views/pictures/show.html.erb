@@ -1,2 +1,8 @@
-<h1>Pictures#show</h1>
-<p>Find me in app/views/pictures/show.html.erb</p>
+<h1>画像詳細画面</h1>
+<ul>
+  <li>登場話数: <%= @picture.episode %></li>
+  <li>セリフ: <%= @picture.serif %></li>
+</ul>
+<p>
+  <%= @picture.picture %>
+</p>

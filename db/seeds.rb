@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# coding: utf-8
+Picture.create(:id => 1, :serif => "私に勝てない勝負などありません。", :episode => 20, :picture => 'samplesample')

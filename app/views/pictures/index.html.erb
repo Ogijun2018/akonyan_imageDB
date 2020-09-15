@@ -1,2 +1,7 @@
-<h1>Pictures#index</h1>
-<p>Find me in app/views/pictures/index.html.erb</p>
+<h1>画像たち</h1>
+<p>
+  <% @pictures.each do |picture| %>
+  [話数] <%= picture.episode %>, [セリフ] <%= picture.serif %><br />
+  <%= picture.picture %>
+  <% end %>
+</p>
