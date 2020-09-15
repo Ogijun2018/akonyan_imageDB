@@ -1,7 +1,13 @@
-<h1>画像たち</h1>
-<p>
+<div>
   <% @pictures.each do |picture| %>
-  [話数] <%= picture.episode %>, [セリフ] <%= picture.serif %><br />
-  <%= picture.picture %>
+  <div class="index-container">
+    <p>
+      [話数] <%= picture.episode %>
+    </p>
+    <p>
+      [セリフ] <%= picture.serif %>
+    </p>
+    <%= image_tag(image_url(picture.picture), class: 'image') %><br />
+  </div>
   <% end %>
-</p>
+</div>
