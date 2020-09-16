@@ -1,6 +1,18 @@
 class PicturesController < ApplicationController
+  before_action :twitter_client, except: :new
+
   def index
     @pictures = Picture.all
+  end
+
+  def post
+    require 'open-uri'
+    @tweet = Picture.order('random()').first
+    status = ''
+    # to_sで文字列に変換
+    media = open(@tweet.picture.to_s)
+    @client.update_with_media(status, media)
+    redirect_to :root
   end
 
   def new
@@ -17,6 +29,15 @@ class PicturesController < ApplicationController
   end
 
   def update
+  end
+
+  def twitter_client
+    @client = Twitter::REST::Client.new do |config|
+      config.consumer_key = "CALKHtZC8RoWopmp2arTBLgt0"
+      config.consumer_secret = "lGNBFr8PqYSyZwbLm7aRgNqPJbfiLEOmK9tn4ChySJnr7slJw7"
+      config.access_token = "1306064281268449280-0t3d1yvFPqtv3iFHQ3kE5lKZZtmklS"
+      config.access_token_secret = "SiYJlnSSIsZBo2tlML6wFaLKhim8TFyya9oRuJ4dS19rC"
+    end
   end
 
   private 
