@@ -1,25 +1,9 @@
-# README
+# Akonyan Image Database （早乙女あこ画像DB）
+This repository is a database of screenshots of Ako Saotome from Aikatsu Stars!.  
+Images are only updated by the administrator at this time.  
+Images will be randomly posted to Twitter once every 30 minutes.  
+Twitter: https://twitter.com/akonyan_img
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# akonyan_imageDB
+___
+* Ruby version  
+2.6.3
