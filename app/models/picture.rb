@@ -1,3 +1,3 @@
 class Picture < ApplicationRecord
-  mount_uploader :picture, PictureUploader
+  mount_uploaders :picture, PictureUploader
 end
