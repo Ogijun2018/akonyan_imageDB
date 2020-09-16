@@ -1,6 +1,6 @@
 <h1>Pictures#new</h1>
 <%= form_with model: @picture, local: true do |f| %>
-  <%= f.file_field :picture, multiple: true %>
+  <%= f.file_field :picture %>
   <%= f.submit '画像をアップロードする' %>
 <% end %>
 <button type="submit" style = "width: 70px; height: 25px;"><%= link_to 'ツイート', post_pictures_path %></button>
