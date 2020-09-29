@@ -33,6 +33,8 @@ gem 'dotenv-rails'
 gem 'twitter'
 gem 'whenever', require: false
 
+gem 'kaminari'
+
 group :production do
   gem 'pg'
 end
