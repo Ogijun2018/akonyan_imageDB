@@ -1,13 +1,18 @@
-<div>
-  <h1>新着</h1>
-  <%= button_to '新規登録', new_picture_path, method: :get %>
-  <% @pictures.each do |picture| %>
-  <div class="index-container">
-    ID: <%= picture.id %>
-    <%= link_to "削除", picture, method: :delete, data: { confirm: "画像を削除して大丈夫ですか？" } %>
-    <br>
-    <%= image_tag(image_url(picture.picture), class: 'image') %>
+<div class="container">
+  <div class="jumbotron m-3">
+    <h1 class="display-5">新着</h1>
+    <hr class="my-4">
+    <button type="button" class="btn btn-primary">
+      <%= link_to '新規登録', new_picture_path, method: :get, :style => "color:white; text-decoration:none;" %>
+    </button>
+    <% @pictures.each do |picture| %>
+    <div class="index-container">
+      ID: <%= picture.id %>
+      <%= link_to "削除", picture, method: :delete, data: { confirm: "画像を削除して大丈夫ですか？" } %>
+      <br>
+      <%= image_tag(image_url(picture.picture), class: 'image') %>
+    </div>
+    <% end %>
+    <%= paginate @pictures %>
   </div>
-  <% end %>
-  <%= paginate @pictures %>
 </div>
