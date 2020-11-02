@@ -3,6 +3,9 @@
   <%= button_to '新規登録', new_picture_path, method: :get %>
   <% @pictures.each do |picture| %>
   <div class="index-container">
+    ID: <%= picture.id %>
+    <%= link_to "削除", picture, method: :delete, data: { confirm: "画像を削除して大丈夫ですか？" } %>
+    <br>
     <%= image_tag(image_url(picture.picture), class: 'image') %>
   </div>
   <% end %>

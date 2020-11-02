@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root "pictures#index"
-  resources :pictures, only: [:new, :create] do
+  resources :pictures, only: [:new, :create, :destroy] do
     collection do
       get 'post'
     end

@@ -31,6 +31,12 @@ class PicturesController < ApplicationController
   def update
   end
 
+  def destroy
+    @picture = Picture.find_by(id: params[:id])
+    @picture.destroy
+    redirect_to root_path
+  end
+
   def twitter_client
     @client = Twitter::REST::Client.new do |config|
       config.consumer_key = "CALKHtZC8RoWopmp2arTBLgt0"
