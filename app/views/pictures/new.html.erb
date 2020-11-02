@@ -1,6 +1,12 @@
-<h1>Pictures#new</h1>
-<%= form_with model: @picture, local: true do |f| %>
-  <%= f.file_field :picture %>
-  <%= f.submit '画像をアップロードする' %>
-<% end %>
-<button type="submit" style = "width: 70px; height: 25px;"><%= link_to 'ツイート', post_pictures_path %></button>
+<div class="container">
+<div class="jumbotron m-3">
+  <h1>新規画像</h1>
+  <%= form_with model: @picture, local: true do |f| %>
+    <%= f.file_field :picture %>
+    <%= f.submit '画像をアップロードする' %>
+  <% end %>
+  <br>
+  <hr class="my-4">
+  <button type="submit" class="btn btn-primary"><%= link_to 'ツイート', post_pictures_path, :style=>"color: white; text-decoration: none;" %></button>
+  </div>
+</div>
