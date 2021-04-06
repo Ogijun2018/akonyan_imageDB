@@ -22,6 +22,7 @@ class PicturesController < ApplicationController
   def create
     @picture = Picture.new(picture_params) # put into the data from form
     @picture.save
+    redirect_to new_picture_path
     # redirect_to root_path
   end
 
