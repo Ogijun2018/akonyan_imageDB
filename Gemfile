@@ -34,6 +34,7 @@ gem 'twitter'
 gem 'whenever', require: false
 
 gem 'kaminari'
+gem 'dropzonejs-rails'
 
 group :production do
   gem 'pg'
