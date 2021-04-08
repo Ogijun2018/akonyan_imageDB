@@ -6,23 +6,29 @@
       <%= link_to '新規登録', new_picture_path, method: :get, :style => "color:white; text-decoration:none;" %>
     </button>
     <hr class="my-4">
-    <% @pictures.each do |picture| %>
-      <div class="card" style="width: 18rem;">
-        <%= image_tag(image_url(picture.picture), class: 'image') %>
-        <div class="card-body">
-          <div class="card-text d-flex justify-content-between align-items-center">
-            <div>
-              ID: <%= picture.id %>
-            </div>
-            <div>
-              <button type="button" class="btn btn-danger">
-                <%= link_to "削除", picture, method: :delete, data: { confirm: "Are you sure?" } , :style => "color:white; text-decoration:none;" %>
-              </button>
+    <div class="row d-flex" style="margin-left: 5px">
+      <% @pictures.each do |picture| %>
+        <div class="col-lg-4">
+          <div class="card" style="width: 18rem; margin-bottom: 2rem;">
+            <%= image_tag(image_url(picture.picture), class: 'card-img-top') %>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between align-items-center">
+                <div>
+                  ID: <%= picture.id %>
+                </div>
+                <div>
+                  <button type="button" class="btn btn-danger">
+                    <%= link_to "削除", picture, method: :delete, data: { confirm: "Are you sure?" } , :style => "color:white; text-decoration:none;" %>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    <% end %>
-    <%= paginate @pictures %>
+      <% end %>
+    </div>
+    <div class="d-flex justify-content-center">
+      <%= paginate @pictures %>
+    </div>
   </div>
 </div>

@@ -1,6 +1,6 @@
 class PicturesController < ApplicationController
   before_action :twitter_client, except: :new
-  PER = 5
+  PER = 6
   def index
     @pictures = Picture.order(created_at: :desc).page(params[:page]).per(PER)
   end
