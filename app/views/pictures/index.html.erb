@@ -2,7 +2,11 @@
   <div class="jumbotron m-3">
     <h1 class="display-6 font-weight-bold">新着画像</h1>
     <hr class="my-4">
-    <%= link_to '新規登録', new_picture_path, method: :get, :style => "color:white; text-decoration:none;", class: 'btn btn-primary'%>
+    <% if logged_in? %>
+      <%= link_to '新規登録', new_picture_path, method: :get, :style => "color:white; text-decoration:none;", class: 'btn btn-primary'%>
+    <% else %>
+      <%= link_to "ログイン", login_path, :style => "color:white; text-decoration:none;", class: 'btn btn-primary'%>
+    <% end %>
     <hr class="my-4">
     <div class="row d-flex" style="margin-left: 5px">
       <% @pictures.each do |picture| %>
@@ -15,7 +19,9 @@
                   ID: <%= picture.id %>
                 </div>
                 <div>
-                  <%= link_to "削除", picture, method: :delete, data: { confirm: "Are you sure?" } , :style => "color:white; text-decoration:none;", class: 'btn btn-danger' %>
+                  <% if logged_in? %>
+                    <%= link_to "削除", picture, method: :delete, data: { confirm: "Are you sure?" } , :style => "color:white; text-decoration:none;", class: 'btn btn-danger' %>
+                  <% end %>
                 </div>
               </div>
             </div>
