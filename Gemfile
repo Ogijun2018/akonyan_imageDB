@@ -36,6 +36,7 @@ gem 'whenever', require: false
 gem 'kaminari'
 gem 'dropzonejs-rails'
 gem 'jquery-rails'
+gem 'impressionist'
 
 group :production do
   gem 'pg'

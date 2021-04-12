@@ -28,6 +28,8 @@ class PicturesController < ApplicationController
   end
 
   def show
+    @picture = Picture.find_by(id: params[:id])
+    impressionist(@picture, nil, unique: [:ip_address])
   end
 
   def update
