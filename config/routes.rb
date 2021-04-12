@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'sessions/new'
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
-  delete '/logout', to: 'sessions#destroy'
+  delete '/logout', to: 'sessions#destroy', :as => :logout
   root "pictures#index"
   resources :pictures, only: [:new, :create, :destroy] do
     collection do
