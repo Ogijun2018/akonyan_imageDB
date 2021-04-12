@@ -4,7 +4,7 @@
     <hr class="my-4">
     <% if logged_in? %>
       <%= link_to '新規登録', new_picture_path, method: :get, :style => "color:white; text-decoration:none;", class: 'btn btn-primary'%>
-      <%= link_to 'ログアウト', logout_path, method: :post, :style => "color:white; text-decoration:none;", class: 'btn btn-primary'%>
+      <%= link_to 'ログアウト', logout_path, method: :delete, :style => "color:white; text-decoration:none;", class: 'btn btn-primary'%>
     <% else %>
       <%= link_to "ログイン", login_path, :style => "color:white; text-decoration:none;", class: 'btn btn-primary'%>
     <% end %>
