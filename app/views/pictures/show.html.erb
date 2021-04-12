@@ -1,8 +1,9 @@
 <h1>画像詳細画面</h1>
 <ul>
-  <li>登場話数: <%= @picture.episode %></li>
-  <li>セリフ: <%= @picture.serif %></li>
+  <li>ID: <%= @picture.id %></li>
+  <li>PV数</li>
+  <li><%= @picture.impressions_count %></li>
 </ul>
-<p>
-  <%= @picture.picture %>
-</p>
+<div class="text-center">
+  <%= image_tag(image_url(@picture.picture), class: 'img-fluid') %>
+</div>

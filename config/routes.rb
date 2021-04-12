@@ -9,6 +9,6 @@ Rails.application.routes.draw do
       get 'post'
     end
   end
-  get "pictures/show", action: :show, controller: 'pictures'
+  get "pictures/:id", action: :show, controller: 'pictures'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

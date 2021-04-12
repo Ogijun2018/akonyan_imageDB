@@ -13,11 +13,11 @@
       <% @pictures.each do |picture| %>
         <div class="col-lg-4">
           <div class="card" style="width: 18rem; margin-bottom: 2rem;">
-            <%= image_tag(image_url(picture.picture), class: 'card-img-top') %>
+            <%= link_to image_tag(image_url(picture.picture), class: 'card-img-top'), picture, method: :get %>
             <div class="card-body">
               <div class="card-text d-flex justify-content-between align-items-center">
                 <div>
-                  ID: <%= picture.id %>
+                  PV数: <%= picture.impressions_count %> 
                 </div>
                 <div>
                   <% if logged_in? %>
