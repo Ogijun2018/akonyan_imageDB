@@ -7,6 +7,7 @@ Twitter: https://twitter.com/akonyan_img
 
 Web: https://akonyan-image-db.herokuapp.com/
 
+Server: heroku
 ___
 * Ruby version  
 2.6.3
