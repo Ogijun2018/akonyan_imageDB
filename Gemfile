@@ -38,6 +38,8 @@ gem 'dropzonejs-rails'
 gem 'jquery-rails'
 gem 'impressionist'
 
+gem 'mini_magick', '~> 4.8'
+
 group :production do
   gem 'pg'
 end

@@ -1,7 +1,7 @@
 <%= javascript_pack_tag 'index' %>
 <div class="container">
   <div class="jumbotron m-3">
-    <h1 class="display-6 font-weight-bold">New Akonyan</h1>
+    <h1 class="display-6 font-weight-bold">Akonyan Image DB (β version)</h1>
     <hr class="my-4">
     <% if logged_in? %>
       <%= link_to '新規登録', new_picture_path, method: :get, :style => "color:white; text-decoration:none;", class: 'btn btn-primary'%>
@@ -34,7 +34,9 @@
     <div class="d-flex justify-content-center">
       <%= paginate @pictures %>
     </div>
-    <a class="js-modal-open" href="" data-target="modal01">Buy me a coffee</a>
+    <div class="d-flex justify-content-center">
+      <a class="js-modal-open" href="" data-target="modal01">Buy me a coffee</a>
+    </div>
 
     <div id="modal01" class="c-modal js-modal">
       <div class="c-modal_bg js-modal-close"></div>
