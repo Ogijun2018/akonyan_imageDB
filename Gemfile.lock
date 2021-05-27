@@ -313,6 +313,7 @@ DEPENDENCIES
   jquery-rails
   kaminari
   listen (~> 3.2)
+  mini_magick (~> 4.8)
   pg
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.3)
