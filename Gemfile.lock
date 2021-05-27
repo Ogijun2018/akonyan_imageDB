@@ -118,6 +118,7 @@ GEM
     formatador (0.2.5)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    google-analytics-rails (1.1.1)
     http (4.4.1)
       addressable (~> 2.3)
       http-cookie (~> 1.0)
@@ -308,6 +309,7 @@ DEPENDENCIES
   dotenv-rails
   dropzonejs-rails
   fog-aws
+  google-analytics-rails
   impressionist
   jbuilder (~> 2.7)
   jquery-rails

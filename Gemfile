@@ -39,6 +39,7 @@ gem 'jquery-rails'
 gem 'impressionist'
 
 gem 'mini_magick', '~> 4.8'
+gem 'google-analytics-rails'
 
 group :production do
   gem 'pg'
