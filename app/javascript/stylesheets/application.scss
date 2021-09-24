@@ -1,6 +1,11 @@
 @import "~bootstrap/scss/bootstrap";
 @import "layouts/navbar";
 
+.jumbotron {
+  padding-top: 100px !important;
+  margin-bottom: -100px !important;
+}
+
 .image {
   width: "100%";
 }
@@ -96,7 +101,7 @@
 footer {
   bottom: 0;
   position: fixed;
-  padding-top: 5px;
+  margin-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #555;
   width: 100%;
