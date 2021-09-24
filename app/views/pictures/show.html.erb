@@ -1,9 +1,6 @@
-<h1>画像詳細画面</h1>
-<ul>
-  <li>ID: <%= @picture.id %></li>
-  <li>PV数</li>
-  <li><%= @picture.impressions_count %></li>
-</ul>
-<div class="text-center">
-  <%= image_tag(image_url(@picture.picture), class: 'img-fluid') %>
+<div class="container-fluid">
+  <div class="neumorphism">
+    <%= image_tag(image_url(@picture.picture), class: 'img-fluid box') %>
+  </div>
+  <!-- <p class="view">view: <%=@picture.impressions_count %></p> -->
 </div>
