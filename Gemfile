@@ -37,6 +37,7 @@ gem 'kaminari'
 gem 'dropzonejs-rails'
 gem 'jquery-rails'
 gem 'impressionist'
+gem 'rack-user_agent'
 
 gem 'mini_magick', '~> 4.8'
 gem 'google-analytics-rails'

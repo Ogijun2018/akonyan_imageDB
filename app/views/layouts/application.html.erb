@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="cover">
+<html>
   <head>
-    <title>AkonyanImagedb</title>
+    <title>AkonyanDB</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,32 +9,11 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= render :partial => "layouts/google_analytics" %>
   </head>
-
-  <body style="background-color: transparent;">
-    <nav class="navbar">
-      <div>
-        <%= link_to "Akonyan Image DB (β)", root_path, class: "navbar__brand navbar__mainLogo" %>
-      </div>
-    </nav>
-    <%= yield %>
+  <body>
+    <div class="full-page">
+      <%= render 'layouts/header' %>
+      <%= yield %>
+    </div>
   </body>
-  <div style="height: 150px">
-  <footer class="footer">
-      <small>
-        <div style="margin-left: 10px;">
-        Created by @juginon_pri
-        <a class="js-modal-open" href="" data-target="modal01">Buy me a coffee</a>
-        </div>
-      </small>
-      <nav>
-        <ul>
-          <% if logged_in? %>
-          <li><%= link_to '新規登録', new_picture_path, method: :get, :style => "color:white; text-decoration:none;"%></li>
-          <li><%= link_to 'ログアウト', logout_path, method: :delete, :style => "color:white; text-decoration:none;"%></li>
-          <% else %>
-          <li><%= link_to "Admin", login_path, :style => "color:#555; text-decoration:none;"%></li>
-          <% end %>
-        </ul>
-      </nav>
-    </footer>
+  <%= render 'layouts/footer' %>
 </html>

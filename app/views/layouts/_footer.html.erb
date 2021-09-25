@@ -1,0 +1,16 @@
+<footer>
+  <small>
+    <div>
+      Created by <a href="https://twitter.com/juginon_pri" style="font-weight: bold;">@juginon_pri</a>
+      <a class="js-modal-open" href="" data-target="modal01">Buy me a coffee</a>
+    </div>
+    <div>
+      <% if logged_in? %>
+        <%= link_to '新規登録', new_picture_path, method: :get, :style => "color:white; text-decoration:none;"%>
+        <%= link_to 'ログアウト', logout_path, method: :delete, :style => "color:white; text-decoration:none;"%>
+      <% else %>
+        <%= link_to "Admin", login_path, :style => "color:#B8B8B8; text-decoration:none;"%>
+      <% end %>
+    </div>
+  </small>
+</footer>
