@@ -345,5 +345,8 @@ DEPENDENCIES
   webpacker (~> 4.0)
   whenever
 
+RUBY VERSION
+   ruby 3.0.0p0
+
 BUNDLED WITH
    2.3.7
