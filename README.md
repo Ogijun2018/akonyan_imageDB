@@ -10,4 +10,4 @@ Web: https://akonyan-image-db.herokuapp.com/
 Server: heroku
 ___
 * Ruby version  
-2.6.3
+3.0.0
