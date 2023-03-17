@@ -4,7 +4,7 @@ namespace :twitter do
     twitter_client
     @tweet = Picture.order('random()').first
     status = ''
-    media = open(@tweet.picture.to_s)
+    media = URI.open(@tweet.picture.to_s)
     @client.update_with_media(status, media)
   end
 end
